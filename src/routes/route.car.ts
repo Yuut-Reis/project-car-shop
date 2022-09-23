@@ -9,6 +9,7 @@ const service = new ServiceCar(model);
 const controller = new ControlerCar(service);
 
 RouterCars.route('/')
+  .get((req, res) => controller.getAll(req, res))
   .post((req, res) => controller.create(req, res));
 
 export default RouterCars;

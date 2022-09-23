@@ -14,4 +14,9 @@ export default class ServicesCar implements IService<ICar> {
     const createCar = await this._car.create(obj);
     return createCar;
   }
+
+  public async getAll(): Promise<ICar[]> {
+    const getCar = await this._car.read();
+    return getCar;
+  }
 }
